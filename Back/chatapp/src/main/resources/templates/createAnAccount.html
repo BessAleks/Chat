@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        text-align="center"
+    </style>
+
+</head>
+
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<center>
+
+    <h1 class="h3 mb-3 font-weight-normal">Please create new user</h1>
+
+    <form action="/createAnAccount" method="post">
+        <input type="text" name="userName" style="width: 250px; height: 30px;" class="form-control" placeholder="User name" required="" autofocus=""><br>
+        <input type="text" name="userLogin" style="width: 250px; height: 30px;" class="form-control" placeholder="User login" required="" ><br>
+        <input type="text" name="userPassword" style="width: 250px; height: 30px;" class="form-control" placeholder="Password" required=""><br>
+        <button class="btn btn-lg btn-primary btn-block" style="width: 250px; height: 50px;" type="submit">Add user</button><br>
+    </form>
+
+    <p class="mt-5 mb-3 text-muted">© 2020 by BessAleks</p>
+
+</center>
+</body>
+
+</html>
